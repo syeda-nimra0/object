@@ -1,0 +1,64 @@
+ body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+      animation: slideDown 1s ease-in-out;
+    }
+
+    th, td {
+      padding: 12px 15px;
+      text-align: left;
+      border-bottom: 1px solid #eee;
+    }
+
+    th {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    tr:hover {
+      background-color: #f0f0f0;
+      transform: scale(1.01);
+      transition: 0.3s ease;
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    tr {
+      animation: fadeInRow 0.5s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    tr:nth-child(n) {
+      animation-delay: calc(0.05s * var(--i));
+    }
+
+    @keyframes fadeInRow {
+      to {
+        opacity: 1;
+      }
+    }
+ 
